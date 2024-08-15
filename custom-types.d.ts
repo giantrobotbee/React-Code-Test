@@ -1,0 +1,3 @@
+type OrderInfo = {
+  orderNumber: string;
+};
