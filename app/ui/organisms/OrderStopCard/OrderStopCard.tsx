@@ -12,9 +12,9 @@ interface IOrderStopCard {
 
 const OrderStopCard: FC<Readonly<IOrderStopCard>> = ({
   order,
-  onConfirmClick = () => {},
+  onConfirmClick = () => { },
 }) => {
-  const { orderNumber } = order;
+  const { orderNumber, orderConfirmed } = order;
 
   return (
     <div>

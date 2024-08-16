@@ -4,7 +4,7 @@ type BasicTextVariant = "body" | "caption";
 
 interface IBasicTextProps {
   variant?: BasicTextVariant;
-  children: string[];
+  children: string | string[];
 }
 
 const BasicText: FC<Readonly<IBasicTextProps>> = ({
