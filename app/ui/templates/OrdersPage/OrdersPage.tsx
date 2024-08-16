@@ -25,8 +25,6 @@ const OrdersPageTemplate: FC<Readonly<IOrdersPageTemplateProps>> = ({
   const [dialogOpen, setDialogOpen] = useState(false);
   const [orderData, setOrderData] = useState(orders);
 
-  console.log(orderData);
-
   const onConfirmClick = (orderNumber: string) => {
     setCurrentOrder(orderNumber);
     setDialogOpen(!dialogOpen);
@@ -66,7 +64,7 @@ const OrdersPageTemplate: FC<Readonly<IOrdersPageTemplateProps>> = ({
   };
 
   return (
-    <div>
+    <div className={styles.ordersPage}>
       {map<OrderInfo, ReactNode>((order) => {
         return (
           <OrderStopCard

@@ -5,6 +5,8 @@ import { Button } from "@ariakit/react";
 
 import BasicText from "@/app/ui/atoms/BasicText";
 
+import styles from "./styles.module.css";
+
 interface IOrderStopCard {
   order: OrderInfo;
   onConfirmClick: (orderNumber: string) => void;
@@ -17,20 +19,20 @@ const OrderStopCard: FC<Readonly<IOrderStopCard>> = ({
   const { orderNumber, orderConfirmed } = order;
 
   return (
-    <div>
+    <div className={styles.orderStopCard}>
       <header>
-        <div>
+        <div className={styles.headerText}>
           <BasicText>Order {`#${orderNumber}`}</BasicText>
-          <span>Spliff Decision</span>
+          <BasicText variant="caption">Spliff Decision</BasicText>
         </div>
       </header>
       <main>
-        <div>
+        <div className={styles.orderAction}>
           <Button onClick={() => onConfirmClick(orderNumber)}>
             Confirm delivery
           </Button>
         </div>
-        <div>
+        <div className={styles.orderAction}>
           <Button>Record payment</Button>
         </div>
       </main>

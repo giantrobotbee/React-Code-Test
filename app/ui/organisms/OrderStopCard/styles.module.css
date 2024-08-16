@@ -1,0 +1,44 @@
+.orderStopCard {
+  display: flex;
+  flex-flow: column;
+  background-color: #fff;
+  border: 1px transparent solid;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+
+  & header {
+    display: flex;
+    flex-flow: column;
+    background-color: var(--header-color);
+    padding: calc(14 / 16 * 1rem) 1rem;
+
+    .headerText {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+
+  & main {
+    display: flex;
+    flex-flow: column;
+    padding-left: 1rem;
+
+    .orderAction {
+      width: 100%;
+
+      & button {
+        display: flex;
+        background-color: transparent;
+        border: none;
+        padding: 1rem 1rem 1rem 0;
+        width: 100%;
+      }
+    }
+
+    .orderAction + .orderAction {
+      & button {
+        border-top: 1px solid var(--border-color);
+      }
+    }
+  }
+}
