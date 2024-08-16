@@ -9,3 +9,12 @@
   font-size: calc(12 / 16 * 1rem);
   color: var(--gray-text-color);
 }
+
+.header {
+  font-weight: 600;
+  font-size: calc(20 / 16 * 1rem);
+}
+
+.strong {
+  font-weight: 600;
+}

@@ -23,7 +23,6 @@
   overflow: auto;
   border-radius: 0.75rem;
   background-color: white;
-  padding: 1rem;
   color: black;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   transform-origin: center;
@@ -32,6 +31,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transform: scale(0.95);
+  width: fit-content;
 
   &[data-enter] {
     opacity: 1;

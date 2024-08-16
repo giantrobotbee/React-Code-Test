@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import styles from "./styles.module.css";
 
-type BasicTextVariant = "body" | "caption";
+type BasicTextVariant = "body" | "caption" | "header" | "strong";
 
 interface IBasicTextProps {
   variant?: BasicTextVariant;
@@ -14,9 +14,7 @@ const BasicText: FC<Readonly<IBasicTextProps>> = ({
   children,
 }) => {
   return (
-    <span className={(variant === "caption" && styles.caption) || ""}>
-      {children}
-    </span>
+    <span className={`${styles.basicText} ${styles[variant]}`}>{children}</span>
   );
 };
 

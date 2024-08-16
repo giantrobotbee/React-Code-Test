@@ -1,5 +1,53 @@
+.deliveryConfirmationModal {
+  display: flex;
+  flex-flow: column;
+}
+
+.modalBody {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 2rem calc(24 / 16 * 1rem);
+
+  .bodyText {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+
+.modalFooter {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+
+  & button {
+    background-color: #fff;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    width: 100%;
+
+    &.confirmButton {
+      background-color: var(--yellow-color);
+    }
+
+    &:disabled {
+      background-color: var(--input-border-color);
+    }
+  }
+}
+
 .input {
+  margin-top: calc(24 / 16 * 1rem);
+  padding: calc(12 / 16 * 1rem) 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--input-border-color);
+  width: 100%;
+
   &[aria-invalid="true"] {
-    border: 1px solid red;
+    border: 1px solid var(--error-red);
   }
 }
