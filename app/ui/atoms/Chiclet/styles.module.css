@@ -1,0 +1,12 @@
+.chiclet {
+  border-radius: 3px;
+  border: 1px solid var(--border-color);
+  padding: calc(4 / 16 * 1rem);
+  font-size: calc(10 / 16 * 1rem);
+  line-height: 1;
+}
+
+.success {
+  background-color: var(--success-green);
+  color: var(--success-text-color);
+}

@@ -6,6 +6,7 @@ import { Button } from "@ariakit/react";
 import BasicText from "@/app/ui/atoms/BasicText";
 
 import styles from "./styles.module.css";
+import Chiclet from "../../atoms/Chiclet";
 
 interface IOrderStopCard {
   order: OrderInfo;
@@ -28,8 +29,12 @@ const OrderStopCard: FC<Readonly<IOrderStopCard>> = ({
       </header>
       <main>
         <div className={styles.orderAction}>
-          <Button onClick={() => onConfirmClick(orderNumber)}>
+          <Button
+            onClick={() => onConfirmClick(orderNumber)}
+            disabled={orderConfirmed}
+          >
             Confirm delivery
+            {orderConfirmed && <Chiclet variant="success" label="Confirmed" />}
           </Button>
         </div>
         <div className={styles.orderAction}>

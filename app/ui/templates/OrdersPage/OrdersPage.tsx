@@ -73,7 +73,7 @@ const OrdersPageTemplate: FC<Readonly<IOrdersPageTemplateProps>> = ({
             key={order.orderNumber}
           />
         );
-      }, orders)}
+      }, orderData)}
       <DeliveryConfirmationModal
         orderNumber={currentOrder}
         open={dialogOpen}
