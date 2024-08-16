@@ -2,6 +2,7 @@
 
 import { FC } from "react";
 import { Button } from "@ariakit/react";
+import Icon from "feather-icons-react";
 
 import BasicText from "@/app/ui/atoms/BasicText";
 
@@ -33,12 +34,23 @@ const OrderStopCard: FC<Readonly<IOrderStopCard>> = ({
             onClick={() => onConfirmClick(orderNumber)}
             disabled={orderConfirmed}
           >
-            Confirm delivery
+            <span className={styles.buttonText}>
+              <Icon
+                icon={orderConfirmed ? "check-circle" : "package"}
+                size="16"
+              />
+              Confirm delivery
+            </span>
             {orderConfirmed && <Chiclet variant="success" label="Confirmed" />}
           </Button>
         </div>
         <div className={styles.orderAction}>
-          <Button>Record payment</Button>
+          <Button>
+            <span className={styles.buttonText}>
+              <Icon icon="dollar-sign" size="16" />
+              Record payment
+            </span>
+          </Button>
         </div>
       </main>
     </div>

@@ -9,6 +9,10 @@
   align-items: center;
   padding: 2rem calc(24 / 16 * 1rem);
 
+  & svg {
+    color: var(--gray-text-color);
+  }
+
   .bodyText {
     display: flex;
     flex-flow: column;
@@ -24,6 +28,10 @@
   border-top: 1px solid var(--border-color);
 
   & button {
+    display: flex;
+    gap: calc(8 / 16 * 1rem);
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
     padding: 0.5rem;
     border: 1px solid var(--border-color);

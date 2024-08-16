@@ -34,6 +34,15 @@
         padding: 1rem 1rem 1rem 0;
         width: 100%;
 
+        .buttonText {
+          display: flex;
+          gap: calc(12 / 16 * 1rem);
+
+          & svg {
+            color: var(--gray-text-color);
+          }
+        }
+
         &:disabled {
           color: var(--gray-text-color);
         }

@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { Button, DialogDismiss } from "@ariakit/react";
+import Icon from "feather-icons-react";
 
 import BasicText from "@/app/ui/atoms/BasicText";
 import DialogBox from "@/app/ui/organisms/DialogBox";
@@ -32,6 +33,7 @@ const DeliveryConfirmationModal: FC<
 
     useEffect(() => {
       if (value.length < orderNumber.length) {
+        setIsActive(false);
         setIsValid(true);
         return;
       }
@@ -43,8 +45,6 @@ const DeliveryConfirmationModal: FC<
         setIsValid(false);
         setIsActive(false);
       }
-
-      return () => { };
     }, [value]);
 
     return (
@@ -59,6 +59,7 @@ const DeliveryConfirmationModal: FC<
       >
         <div className={styles.deliveryConfirmationModal}>
           <div className={styles.modalBody}>
+            <Icon icon="alert-triangle" />
             <div className={styles.bodyText}>
               <BasicText variant="header">
                 Confirm delivery for Order {`#${orderNumber}`}
@@ -82,9 +83,11 @@ const DeliveryConfirmationModal: FC<
               disabled={!isActive}
               onClick={() => onConfirm(orderNumber)}
             >
+              <Icon icon="check" size="12" />
               <BasicText variant="strong">Confirm delivery</BasicText>
             </Button>
             <DialogDismiss className={styles.dismissButton}>
+              <Icon icon="x" size="12" />
               <BasicText variant="strong">Cancel</BasicText>
             </DialogDismiss>
           </div>
