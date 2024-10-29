@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Avery's Figma Demo For Nabis",
+  title: "Avery's React Demo",
   description: "Listening to Tears For Fears when I typed this",
 };
 
